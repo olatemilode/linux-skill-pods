@@ -4,50 +4,30 @@ This week I studied the basics of Linux: what it is, how it differs from other o
 
 Linux is everywhere. It runs web servers, phones, routers, smart TVs, supercomputers and most of the cloud, which is why Linux skills are needed in almost every area of IT, from DevOps and cybersecurity to networking and development.
 
-Strictly speaking, "Linux" is only the **kernel**. The kernel is the core of the operating system: it sits between the hardware and the software and manages the CPU, memory, storage and devices. Everything else (the shell, tools, desktop and package manager) is added on top by a **distribution**. To check my own kernel, I ran `uname -a`, which prints system information including the kernel name and version. Running `uname -r` prints only the release number.
+Strictly speaking, "Linux" is only the kernel. The kernel is the core of the operating system: it sits between the hardware and the software and manages the CPU, memory, storage and devices. Everything else (the shell, tools, desktop and package manager) is added on top by a distribution.
 
-![Kernel version](screenshots/01-kernel.png)
+Linux is also ooen source. Its source code is public, so anyone can read it, modify it and share it under licences like the GPL. This is why Linux improves quickly, costs nothing to use, and is trusted for security-sensitive work: many people can inspect the code.
 
-Linux is also **open source**. Its source code is public, so anyone can read it, modify it and share it under licences like the GPL. This is why Linux improves quickly, costs nothing to use, and is trusted for security-sensitive work: many people can inspect the code.
-
-A distribution (distro) bundles the Linux kernel with software, tools, a package manager and often a desktop environment. Examples include Ubuntu, Debian, Fedora and Red Hat. Distros fall into families, which matters mostly for package management. The Debian family (Debian, Ubuntu) uses `.deb` packages with `apt` and `dpkg`, while the Red Hat family (RHEL, Fedora, CentOS) uses `.rpm` packages with `dnf`, `yum` and `rpm`. I checked which distribution I'm running with `cat /etc/os-release`, which shows the name and version of the installed distro.
-
-![OS release](screenshots/02-os-release.png)
+A distribution (distro) bundles the Linux kernel with software, tools, a package manager and often a desktop environment. Examples include Ubuntu, Debian, Fedora and Red Hat. Distros fall into families, which matters mostly for package management. The Debian family (Debian, Ubuntu) uses `.deb` packages with `apt` and `dpkg`, while the Red Hat family (RHEL, Fedora, CentOS) uses `.rpm` packages with `dnf`, `yum` and `rpm`. 
 
 An operating system is the software that manages a computer's hardware and software resources. It schedules programs so many tasks appear to run at the same time (multitasking) and provides standard services programs can request, such as printing or file access. Comparing the main options, Windows is the most common on desktops with strong software and gaming support, macOS is a polished Unix-based system tied to Apple hardware, and Linux is free, flexible and dominant on servers and in the cloud. Linux is also used in embedded systems, meaning single-purpose devices like routers and set-top boxes.
 
-Linux can be used entirely from the command line, which is fast, scriptable and works on remote servers that have no desktop. A **shell** is the program that reads the commands I type and passes them to the operating system, and Bash is the most common one. I checked mine with `echo $SHELL`, which shows the path to my default shell. I also practised basic navigation with `pwd` (print the current directory), `ls -l` (list files with permissions, owner, size and date), `cd <dir>` (move into a directory) and `whoami` (show the current user).
+Linux can be used entirely from the command line, which is fast, scriptable and works on remote servers that have no desktop. A **shell** is the program that reads the commands I type and passes them to the operating system, and Bash is the most common one. 
 
-![Shell and navigation](screenshots/03-shell-navigation.png)
-
-Package managers install, update and remove software and handle dependencies automatically. On Ubuntu I used `sudo apt update` to refresh the list of available packages, `sudo apt install tree` to install the `tree` package (`sudo` runs the command with administrator rights), and `apt list --installed | head` to list installed packages, with `head` limiting the output to the first few lines.
-
-![Package management](screenshots/04-apt.png)
+Package managers install, update and remove software and handle dependencies automatically. 
 
 Finally, most cloud servers run Linux. Cloud providers let you rent virtual machines running distributions like Ubuntu, which you then manage over the command line. This connects directly to the DevOps and cloud work I'm building towards.
 
----
+
 
 ## How I Learned It
 
-I attended the weekly discussion sessions, worked through the course modules (Introduction to Linux, Operating Systems, and Working on the Linux Desktop) during personal study time, and practised every command in my own Ubuntu terminal on WSL instead of only reading about it.
+I attended the weekly discussion sessions, worked through the course modules (Introduction to Linux, Operating Systems, and Working on the Linux Desktop) during personal study time.
 
----
-
-## Challenges
-
-[Write 2 or 3 real challenges in your own words, and how you solved them. For example: a command that gave an error, getting used to the terminal, understanding the difference between Linux and a distribution, or remembering when `sudo` is needed.]
-
----
 
 ## Key Takeaways
 
-- Linux is the **kernel**; a **distribution** turns it into a complete operating system.
+- Linux is the kernel, a distribution turns it into a complete operating system.
 - Open source is the reason Linux is so widely used, adaptable and trusted.
 - The command line is the main tool for working with Linux, especially on servers and in the cloud.
 - Knowing which distribution family I'm on tells me which package manager to use.
-- Practising commands hands-on made the concepts stick far better than reading alone.
-
----
-
-*Written as part of my weekly documentation assignment.*
