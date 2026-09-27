@@ -4,7 +4,15 @@ Source code must be compiled into machine instructions before a computer can run
 A shell reads what I type and passes it to the operating system. Commands can take arguments (what they act on) and options (flags that change behaviour), and the shell keeps a history I can scroll back through. Variables store values: local variables stay in the current session, environment variables pass to programs the shell starts, and PATH is the special variable listing where the shell looks for commands. Commands are either internal (built into the shell) or external (separate program files), and aliases and functions let me create my own shortcuts. Quoting controls how special characters are treated — double quotes still allow variable substitution, single quotes don't, a backslash escapes one character, and backquotes run a command and substitute its output. Control operators like ;, && and || chain commands together, running the next one unconditionally, only on success, or only on failure.
 Linux has several built-in ways to find documentation. man <command> opens a command's manual page, organised into numbered sections, and can be searched by keyword. info gives more detailed, hyperlinked documentation for many GNU tools. which shows where a command's program file lives on disk, tying back to PATH, and --help gives a quick summary directly in the terminal when I just need a reminder.
 
- How I Learned It
+Commands used 
+man ls - opens the manual page ls, showing its decription , options and usage 
+which ls- shows the full path to the ls progam file, confirming whee the shell finds it way
+echo $PATH - prints teh lists of directories the shell searches, in order, when looking for a command
+ls --help - prints a shot usage summary for ls directly in te terminal, without opening teeh full manual
+history - shows the full history of the command used on the terminal 
+!9 - reuse the command on number 9 of teh history 
+
+How I Learned It
 I attended the weekly discussion sessions, worked through the course modules on open source licensing, the shell, and finding documentation during personal study time, and practised the commands in my own Ubuntu terminal on WSL rather than only reading about them.
 
 Key Takeaways
